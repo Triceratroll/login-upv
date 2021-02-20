@@ -1,0 +1,21 @@
+h1{
+    color: crimson;
+    text-align: center;
+}
+.content {
+    width: 250px;
+    margin: auto;
+    border: 3px solid crimson;
+    padding: 10px;
+}
+input{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.btn_save{
+    margin-top: 20px;
+    margin-left: 85px;
+}
+p{
+text-align: center;
+}

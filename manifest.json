@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Login UPV",
+    "description": "This extension fills up the form automatically by fetching its value from the database",
+    "version": "1.0",
+  
+    "page_action": {
+      "default_icon": "icons/icon16x16.png",
+      "default_title": "Right click and then configuration!"
+    },
+
+    "icons": { 
+        "16": "icons/icon16x16.png",
+        "48": "icons/icon48x48.png",
+        "128": "icons/icon128x128.png" 
+    },
+
+    "options_page":"options.html",
+
+    "background": {
+      "scripts": ["eventPage.js"],
+      "persistent": false 
+    },
+
+    "content_scripts": [
+      {
+        "matches": ["https://intranet.upv.es/pls/soalu/est_intranet.ni_portal_n?P_IDIOMA=c"],
+        "js":["content.js", "jquery-3.5.0.min.js"]
+      }
+    ],
+      
+    "permissions": [
+      "https://intranet.upv.es/pls/soalu/est_intranet.ni_portal_n?P_IDIOMA=c",
+      "activeTab",
+      "storage",
+      "notifications",
+      "tabs"
+    ]
+  }

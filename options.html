@@ -1,0 +1,26 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Extension's Popup</title>
+    <!--
+    - JavaScript and HTML must be in separate files
+    -->
+    <script src="jquery-3.5.0.min.js"></script>
+    <script src="options.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class= "content">
+        <H1 id= "H1">Upv Login</H1>
+        <form>
+            <p>DNI: <input type="text" id="user"></p>
+            <p>Clave:<input type="password" id="pass"></p>
+            <input class= "btn_save" type="submit" id="button" value="Guardar">
+        </form>
+      </div>      
+  </body>
+</html>

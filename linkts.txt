@@ -1,0 +1,4 @@
+https://developer.chrome.com/docs/extensions/reference/storage/
+https://www.reddit.com/r/javascript/comments/8txe2q/how_to_securely_store_an_api_token_in_a_chrome/
+https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API
+https://www.maketecheasier.com/view-source-code-chrome-extension/
