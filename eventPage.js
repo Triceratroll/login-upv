@@ -5,18 +5,18 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponnse){
         chrome.tabs.query({active: true, currentWindow:true}, function(tabs){
             chrome.pageAction.show(tabs[0].id);
 
-            console.log("It works!")
+            //console.log("It works!")
     
             chrome.storage.sync.get(['user', 'pass'], function(stored){
-                console.log("Value is set to " + stored.user);
-                console.log("Value is set to " + stored.pass);
+                //console.log("Value is set to " + stored.user);
+                //console.log("Value is set to " + stored.pass);
                 var newUser = stored.user;
                 var newPass = stored.pass;
                 
                 chrome.tabs.query({active: true, currentWindow:true}, function(tabs){
                     chrome.tabs.sendMessage(tabs[0].id,{todo:"fillUser", storedUser: newUser})
                     chrome.tabs.sendMessage(tabs[0].id,{todo:"fillPass", storedPass: newPass})
-                    console.log("Sended!")
+                    //console.log("Sended!")
                });
            });
         });
@@ -25,6 +25,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponnse){
 
 chrome.runtime.onInstalled.addListener(function (object) {
     chrome.tabs.create({url: "options.html"}, function (tab) {
-        console.log("Setup user and password");
+        //console.log("Setup user and password");
     });
 });
