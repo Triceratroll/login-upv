@@ -17,10 +17,14 @@
       <div class= "content">
         <H1 id= "H1">Upv Login</H1>
         <form>
-            <p>DNI: <input type="text" id="user"></p>
-            <p>Clave:<input type="password" id="pass"></p>
-            <input class= "btn_save" type="submit" id="button" value="Guardar">
+          <div class="inputs">
+            <input type="text" id="user" placeholder="DNI" required>
+            <input type="password" id="pass" placeholder="PIN" required>
+          </div> 
+            <div class="controls">
+              <input id="btn_save" type="submit" id="button" value="Guardar">
+            </div>
         </form>
-      </div>      
+      </div>
   </body>
 </html>

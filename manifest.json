@@ -25,13 +25,16 @@
 
     "content_scripts": [
       {
-        "matches": ["https://intranet.upv.es/pls/soalu/est_intranet.ni_portal_n?P_IDIOMA=c"],
+        "matches": ["https://intranet.upv.es/pls/soalu/est_intranet.NI_Portal_n?p_idioma=c", "https://intranet.upv.es/pls/soalu/est_intranet.NI_Portal_n?p_idioma=v",
+          "https://intranet.upv.es/pls/soalu/est_intranet.NI_Portal_n?p_idioma=i"],
         "js":["content.js", "jquery-3.5.0.min.js"]
       }
     ],
       
     "permissions": [
-      "https://intranet.upv.es/pls/soalu/est_intranet.ni_portal_n?P_IDIOMA=c",
+      "https://intranet.upv.es/pls/soalu/est_intranet.NI_Portal_n?p_idioma=c",
+      "https://intranet.upv.es/pls/soalu/est_intranet.NI_Portal_n?p_idioma=v",
+      "https://intranet.upv.es/pls/soalu/est_intranet.NI_Portal_n?p_idioma=i",
       "activeTab",
       "storage",
       "notifications",
