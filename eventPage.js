@@ -23,8 +23,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponnse){
     }
 });
 
-chrome.runtime.onInstalled.addListener(function (object) {
-    chrome.tabs.create({url: "options.html"}, function (tab) {
-        //console.log("Setup user and password");
-    });
-});
+// Is annoying cause each time chrome updates it gets to show the options page again
+// chrome.runtime.onInstalled.addListener(function (object) {
+//     chrome.tabs.create({url: "options.html"}, function (tab) {
+//         //console.log("Setup user and password");
+//     });
+// });
